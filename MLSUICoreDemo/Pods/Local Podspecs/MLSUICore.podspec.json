@@ -68,9 +68,6 @@
         "MLSUICore/PublicHeader": [
 
         ],
-        "QMUIKit/QMUICore": [
-
-        ],
         "MLSUICore/MLSUnits": [
 
         ]
@@ -92,6 +89,9 @@
       "public_header_files": "MLSUICore/Classes/Units/**/*.h",
       "dependencies": {
         "MLSUICore/PublicHeader": [
+
+        ],
+        "QMUIKit/QMUICore": [
 
         ]
       }
@@ -141,6 +141,12 @@
       "public_header_files": "MLSUICore/Classes/MLSCategories/**/*.h",
       "dependencies": {
         "MLSUICore/PublicHeader": [
+
+        ],
+        "QMUIKit/QMUICore": [
+
+        ],
+        "QMUIKit/QMUIComponents/QMUIButton": [
 
         ]
       },

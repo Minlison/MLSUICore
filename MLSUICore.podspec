@@ -47,7 +47,6 @@ Pod::Spec.new do |s|
         ss.source_files = 'MLSUICore/Classes/MLSConfig/**/*.{h,m}'
         ss.public_header_files = 'MLSUICore/Classes/MLSConfig/**/*.h'
         ss.dependency 'MLSUICore/PublicHeader'
-        ss.dependency 'QMUIKit/QMUICore'
         ss.dependency 'MLSUICore/MLSUnits'
     end
     # 协议
@@ -62,6 +61,7 @@ Pod::Spec.new do |s|
         ss.source_files = 'MLSUICore/Classes/MLSUnits/**/*.{h,m}'
         ss.public_header_files = 'MLSUICore/Classes/Units/**/*.h'
         ss.dependency 'MLSUICore/PublicHeader'
+        ss.dependency 'QMUIKit/QMUICore'
     end
     
     # tip
@@ -95,6 +95,8 @@ Pod::Spec.new do |s|
         ss.source_files = 'MLSUICore/Classes/MLSCategories/**/*.{h,m}'
         ss.public_header_files = 'MLSUICore/Classes/MLSCategories/**/*.h'
         ss.dependency 'MLSUICore/PublicHeader'
+        ss.dependency 'QMUIKit/QMUICore'
+        ss.dependency 'QMUIKit/QMUIComponents/QMUIButton'
         ss.xcconfig = {
             'OTHER_LDFLAGS' => '$(inherited) -ObjC -all_load'
         }

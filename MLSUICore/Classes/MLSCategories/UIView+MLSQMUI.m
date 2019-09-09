@@ -8,6 +8,7 @@
 
 #import "UIView+MLSQMUI.h"
 #import <MLSUICore/MLSUICore.h>
+#import <QMUIKit/QMUIKit.h>
 @interface UIView_MLSQMUI : NSObject
 @end
 @implementation UIView_MLSQMUI

@@ -10,10 +10,12 @@
 #endif
 #endif
 
+#import "QMUIButton+MLSQMUI.h"
+#import "UIButton+MLSTouch.h"
+#import "UIColor+MLSQMUI.h"
+#import "UIImage+MLSQMUI.h"
+#import "UIView+MLSQMUI.h"
 #import "MLSUICore.h"
-#import "QMUIAlertController+MLSUICore.h"
-#import "QMUITextField+MLSUICore.h"
-#import "QMUITextView+MLSUICore.h"
 
 FOUNDATION_EXPORT double MLSUICoreVersionNumber;
 FOUNDATION_EXPORT const unsigned char MLSUICoreVersionString[];

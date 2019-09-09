@@ -1,40 +1,10 @@
 PODS:
-  - MLSUICore/PublicHeader (1.0.0)
-  - MLSUICore/QMUIKit_MLSCategroies (1.0.0):
-    - MLSUICore/QMUIKit_MLSCategroies/Alert (= 1.0.0)
-    - MLSUICore/QMUIKit_MLSCategroies/TextField (= 1.0.0)
-    - MLSUICore/QMUIKit_MLSCategroies/TextView (= 1.0.0)
-  - MLSUICore/QMUIKit_MLSCategroies/Alert (1.0.0):
+  - MLSUICore/MLSCategories (1.0.0):
     - MLSUICore/PublicHeader
-    - QMUIKit/QMUIComponents/QMUIAlertController (>= 3.2.0)
-  - MLSUICore/QMUIKit_MLSCategroies/TextField (1.0.0):
-    - MLSUICore/PublicHeader
-    - QMUIKit/QMUIComponents/QMUITextField (>= 3.2.0)
-  - MLSUICore/QMUIKit_MLSCategroies/TextView (1.0.0):
-    - MLSUICore/PublicHeader
-    - QMUIKit/QMUIComponents/QMUITextView (>= 3.2.0)
-  - QMUIKit/QMUIComponents/QMUIAlertController (3.2.1):
     - QMUIKit/QMUIComponents/QMUIButton
-    - QMUIKit/QMUIComponents/QMUIModalPresentationViewController
-    - QMUIKit/QMUIComponents/QMUITextField
     - QMUIKit/QMUICore
+  - MLSUICore/PublicHeader (1.0.0)
   - QMUIKit/QMUIComponents/QMUIButton (3.2.1):
-    - QMUIKit/QMUICore
-  - QMUIKit/QMUIComponents/QMUIKeyboardManager (3.2.1):
-    - QMUIKit/QMUICore
-  - QMUIKit/QMUIComponents/QMUILabel (3.2.1):
-    - QMUIKit/QMUICore
-  - QMUIKit/QMUIComponents/QMUIModalPresentationViewController (3.2.1):
-    - QMUIKit/QMUIComponents/QMUIKeyboardManager
-    - QMUIKit/QMUICore
-  - QMUIKit/QMUIComponents/QMUIMultipleDelegates (3.2.1):
-    - QMUIKit/QMUICore
-  - QMUIKit/QMUIComponents/QMUITextField (3.2.1):
-    - QMUIKit/QMUIComponents/QMUIMultipleDelegates
-    - QMUIKit/QMUICore
-  - QMUIKit/QMUIComponents/QMUITextView (3.2.1):
-    - QMUIKit/QMUIComponents/QMUILabel
-    - QMUIKit/QMUIComponents/QMUIMultipleDelegates
     - QMUIKit/QMUICore
   - QMUIKit/QMUICore (3.2.1):
     - QMUIKit/QMUILog
@@ -43,7 +13,7 @@ PODS:
   - QMUIKit/QMUIWeakObjectContainer (3.2.1)
 
 DEPENDENCIES:
-  - MLSUICore/QMUIKit_MLSCategroies (from `../`)
+  - MLSUICore/MLSCategories (from `../`)
 
 SPEC REPOS:
   https://cdn.cocoapods.org/:
@@ -54,9 +24,9 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  MLSUICore: 12b628f485aae92f51c19a6bcc808f55c8e64f54
+  MLSUICore: 00172873575cd2eae0c04779eb60a36ed7ac6951
   QMUIKit: a3af645843b9558eb7aaf407b320eaeb45ab6144
 
-PODFILE CHECKSUM: 55e1007adf3c2e61bef9d9b864492c181945d4de
+PODFILE CHECKSUM: 6c67f483fb50c3c66c4017f637714b648d0cc2cf
 
 COCOAPODS: 1.7.5

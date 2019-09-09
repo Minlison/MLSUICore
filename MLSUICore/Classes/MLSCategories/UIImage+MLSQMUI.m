@@ -9,6 +9,7 @@
 #import "MLSUICore.h"
 #import <ImageIO/ImageIO.h>
 #import <Accelerate/Accelerate.h>
+#import <QMUIKit/QMUIKit.h>
 /// Convert degrees to radians.
 static inline CGFloat MLSQMUIDegreesToRadians(CGFloat degrees) {
     return degrees * M_PI / 180;
