@@ -108,7 +108,6 @@
 				1F1C5AC02325FA3E0045C296 /* Frameworks */,
 				1F1C5AC12325FA3E0045C296 /* Resources */,
 				2A4C1C9FFAF59F77210DB93B /* [CP] Embed Pods Frameworks */,
-				2B3B7153C69AC60AD15CE7B1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -178,21 +177,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MLSUICoreDemo/Pods-MLSUICoreDemo-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		2B3B7153C69AC60AD15CE7B1 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MLSUICoreDemo/Pods-MLSUICoreDemo-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		75DE964BDD000F7E189B661F /* [CP] Check Pods Manifest.lock */ = {

@@ -8,6 +8,7 @@
 #import "MLSUIAlertAction.h"
 #import "MLSConfigurationDefine.h"
 #import "MLSUICore.h"
+#import <QMUIKit/QMUIKit.h>
 @interface QMUIAlertAction (Private)
 @property(nonatomic, assign, readwrite) QMUIAlertActionStyle style;
 @property(nonatomic, copy, readwrite) NSString *title;

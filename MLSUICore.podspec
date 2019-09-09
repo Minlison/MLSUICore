@@ -106,6 +106,7 @@ Pod::Spec.new do |s|
             sss.public_header_files = 'MLSUICore/Classes/MLSCommentToolBar/*.h'
             sss.dependency 'MLSUICore/QMUIKit_MLSCategroies/TextField'
             sss.dependency 'MLSUICore/QMUIKit_MLSCategroies/TextView'
+            sss.dependency 'QMUIKit/QMUIComponents/QMUIButton'
             sss.dependency 'MLSUICore/MLSProtocols'
             sss.dependency 'MLSUICore/MLSUnits'
             sss.dependency 'MLSUICore/PublicHeader'

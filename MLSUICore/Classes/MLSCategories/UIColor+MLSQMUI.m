@@ -8,6 +8,7 @@
 
 #import "UIColor+MLSQMUI.h"
 #import <MLSUICore/MLSUICore.h>
+#import <QMUIKit/QMUIKit.h>
 #import <objc/runtime.h>
 @interface UIColor_MLSQMUI : NSObject
 @end

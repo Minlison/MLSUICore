@@ -5,13 +5,8 @@
 //  Created by minlison on 2019/1/16.
 //  Copyright © 2019 minlison. All rights reserved.
 //
-#import <QMUIKit/QMUIRunTime.h>
-#import <QMUIKit/QMUIConfigurationMacros.h>
-#import <QMUIKit/UIView+QMUI.h>
-#import <QMUIKit/QMUICommonDefines.h>
-#import <QMUIKit/QMUIButton.h>
-#import "QMUIAlertController+MLSUICore.h"
-#import "MLSUICore.h"
+#import <QMUIKit/QMUIKit.h>
+#import <MLSUICore/MLSUICore.h>
 
 @interface QMUIAlertController ()
 @property(nonatomic, strong, readwrite) UIView *containerView;

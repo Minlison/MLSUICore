@@ -267,11 +267,11 @@
 - (void)setToolBarActionBlock:(MLSBaseCommentToolBarActionBlock)actionBlock {
     self.actionBlock = actionBlock;
 }
-- (void)setEmotionManager:(QMUIEmotionInputManager *)emotionManager {
 #ifdef MLSCommentToolBarUseEmotion
+- (void)setEmotionManager:(QMUIEmotionInputManager *)emotionManager {
     self.qqEmotionManager = emotionManager;
-#endif
 }
+#endif
 - (void)setAutoResizable:(BOOL)autoResizable {
     _autoResizeble = autoResizable;
     self.textView.autoResizable = autoResizable;
