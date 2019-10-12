@@ -57,28 +57,32 @@
 #pragma mark - Effects
 
 //| ----------------------------------------------------------------------------
-+ (UIImage *)imageByApplyingLightEffectToImage:(UIImage*)inputImage {
++ (UIImage *)imageByApplyingLightEffectToImage:(UIImage*)inputImage
+{
     UIColor *tintColor = [UIColor colorWithWhite:1.0 alpha:0.3];
     return [self imageByApplyingBlurToImage:inputImage withRadius:60 tintColor:tintColor saturationDeltaFactor:1.8 maskImage:nil];
 }
 
 
 //| ----------------------------------------------------------------------------
-+ (UIImage *)imageByApplyingExtraLightEffectToImage:(UIImage*)inputImage {
++ (UIImage *)imageByApplyingExtraLightEffectToImage:(UIImage*)inputImage
+{
     UIColor *tintColor = [UIColor colorWithWhite:0.97 alpha:0.82];
     return [self imageByApplyingBlurToImage:inputImage withRadius:40 tintColor:tintColor saturationDeltaFactor:1.8 maskImage:nil];
 }
 
 
 //| ----------------------------------------------------------------------------
-+ (UIImage *)imageByApplyingDarkEffectToImage:(UIImage*)inputImage {
++ (UIImage *)imageByApplyingDarkEffectToImage:(UIImage*)inputImage
+{
     UIColor *tintColor = [UIColor colorWithWhite:0.11 alpha:0.73];
     return [self imageByApplyingBlurToImage:inputImage withRadius:40 tintColor:tintColor saturationDeltaFactor:1.8 maskImage:nil];
 }
 
 
 //| ----------------------------------------------------------------------------
-+ (UIImage *)imageByApplyingTintEffectWithColor:(UIColor *)tintColor toImage:(UIImage*)inputImage {
++ (UIImage *)imageByApplyingTintEffectWithColor:(UIColor *)tintColor toImage:(UIImage*)inputImage
+{
     const CGFloat EffectColorAlpha = 0.6;
     UIColor *effectColor = tintColor;
     size_t componentCount = CGColorGetNumberOfComponents(tintColor.CGColor);
@@ -101,21 +105,25 @@
 #pragma mark - Implementation
 
 //| ----------------------------------------------------------------------------
-+ (UIImage*)imageByApplyingBlurToImage:(UIImage*)inputImage withRadius:(CGFloat)blurRadius tintColor:(UIColor *)tintColor saturationDeltaFactor:(CGFloat)saturationDeltaFactor maskImage:(UIImage *)maskImage {
++ (UIImage*)imageByApplyingBlurToImage:(UIImage*)inputImage withRadius:(CGFloat)blurRadius tintColor:(UIColor *)tintColor saturationDeltaFactor:(CGFloat)saturationDeltaFactor maskImage:(UIImage *)maskImage
+{
 #define ENABLE_BLUR                     1
 #define ENABLE_SATURATION_ADJUSTMENT    1
 #define ENABLE_TINT                     1
     
     // Check pre-conditions.
-    if (inputImage.size.width < 1 || inputImage.size.height < 1) {
+    if (inputImage.size.width < 1 || inputImage.size.height < 1)
+    {
         NSLog(@"*** error: invalid size: (%.2f x %.2f). Both dimensions must be >= 1: %@", inputImage.size.width, inputImage.size.height, inputImage);
         return nil;
     }
-    if (!inputImage.CGImage) {
+    if (!inputImage.CGImage)
+    {
         NSLog(@"*** error: inputImage must be backed by a CGImage: %@", inputImage);
         return nil;
     }
-    if (maskImage && !maskImage.CGImage) {
+    if (maskImage && !maskImage.CGImage)
+    {
         NSLog(@"*** error: effectMaskImage must be backed by a CGImage: %@", maskImage);
         return nil;
     }
@@ -142,7 +150,8 @@
     CGContextScaleCTM(outputContext, 1.0, -1.0);
     CGContextTranslateCTM(outputContext, 0, -outputImageRectInPoints.size.height);
     
-    if (hasBlur || hasSaturationChange) {
+    if (hasBlur || hasSaturationChange)
+    {
         vImage_Buffer effectInBuffer;
         vImage_Buffer scratchBuffer1;
         
@@ -258,14 +267,16 @@
         CGImageRelease(effectCGImage);
         free(outputBuffer->data);
     }
-    else {
+    else
+    {
         // draw base image
         CGContextDrawImage(outputContext, outputImageRectInPoints, inputCGImage);
     }
     
 #if ENABLE_TINT
     // Add in color tint.
-    if (tintColor) {
+    if (tintColor)
+    {
         CGContextSaveGState(outputContext);
         CGContextSetFillColorWithColor(outputContext, tintColor.CGColor);
         CGContextFillRect(outputContext, outputImageRectInPoints);
@@ -287,7 +298,8 @@
 //| ----------------------------------------------------------------------------
 //  Helper function to handle deferred cleanup of a buffer.
 //
-void cleanupBuffer(void *userData, void *buf_data) { free(buf_data); }
+void cleanupBuffer(void *userData, void *buf_data)
+{ free(buf_data); }
 
 @end
 

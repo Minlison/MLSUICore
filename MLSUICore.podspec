@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name         = "MLSUICore"
-    s.version      = "1.0.0"
+    s.version      = "1.0.0.beta.1"
     s.summary      = "MLSUICore"
     s.description  = <<-DESC
                         MLSUICore 核心UI组件库
@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
     s.requires_arc = true
     s.static_framework = true
 #    s.default_subspec = 'Core'
-    qmuikit_version = '>= 3.2.0'
+    qmuikit_version = '>= 4.0.0'
     masonry_version = '>= 1.1.0'
     afnetworking_version = '>= 3.2.0'
     sdwebimage_version = '>= 5.0.0'
@@ -43,12 +43,14 @@ Pod::Spec.new do |s|
             'MLSUICore' => ['MLSUICore/Resources/img/*.png']
         }
     end
-    s.subspec 'MLSConfig' do |ss|
-        ss.source_files = 'MLSUICore/Classes/MLSConfig/**/*.{h,m}'
-        ss.public_header_files = 'MLSUICore/Classes/MLSConfig/**/*.h'
-        ss.dependency 'MLSUICore/PublicHeader'
-        ss.dependency 'MLSUICore/MLSUnits'
-    end
+#    s.subspec 'MLSConfig' do |ss|
+#        ss.source_files = 'MLSUICore/Classes/MLSConfig/**/*.{h,m}'
+#        ss.public_header_files = 'MLSUICore/Classes/MLSConfig/**/*.h'
+#        ss.dependency 'MLSUICore/PublicHeader'
+#        ss.dependency 'MLSUICore/MLSUnits'
+#        ss.dependency 'QMUIKit/QMUIComponents/QMUILabel', qmuikit_version
+#        ss.dependency 'QMUIKit/QMUIComponents/QMUIButton', qmuikit_version
+#    end
     # 协议
     s.subspec 'MLSProtocols' do |ss|
         ss.source_files = 'MLSUICore/Classes/MLSProtocols/*.{h,m}'
@@ -98,7 +100,7 @@ Pod::Spec.new do |s|
         ss.dependency 'QMUIKit/QMUICore'
         ss.dependency 'QMUIKit/QMUIComponents/QMUIButton'
         ss.xcconfig = {
-            'OTHER_LDFLAGS' => '$(inherited) -ObjC -all_load'
+            'OTHER_LDFLAGS' => '$(inherited) -ObjC'
         }
     end
     # 底部评论框

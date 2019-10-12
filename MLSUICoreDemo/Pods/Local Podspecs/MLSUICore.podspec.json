@@ -30,10 +30,10 @@
       "public_header_files": "MLSUICore/Classes/Core/**/*.h",
       "dependencies": {
         "QMUIKit/QMUIMainFrame": [
-          ">= 3.2.0"
+          ">= 4.0.0"
         ],
         "QMUIKit/QMUIComponents/QMUITableViewCell": [
-          ">= 3.2.0"
+          ">= 4.0.0"
         ],
         "Masonry": [
           ">= 1.1.0"
@@ -57,19 +57,6 @@
       "resource_bundles": {
         "MLSUICore": [
           "MLSUICore/Resources/img/*.png"
-        ]
-      }
-    },
-    {
-      "name": "MLSConfig",
-      "source_files": "MLSUICore/Classes/MLSConfig/**/*.{h,m}",
-      "public_header_files": "MLSUICore/Classes/MLSConfig/**/*.h",
-      "dependencies": {
-        "MLSUICore/PublicHeader": [
-
-        ],
-        "MLSUICore/MLSUnits": [
-
         ]
       }
     },
@@ -102,7 +89,7 @@
       "public_header_files": "MLSUICore/Classes/TipClass/**/*.h",
       "dependencies": {
         "QMUIKit/QMUIComponents/QMUITips": [
-          ">= 3.2.0"
+          ">= 4.0.0"
         ],
         "MLSUICore/PublicHeader": [
 
@@ -192,7 +179,7 @@
 
             ],
             "QMUIKit/QMUIComponents/QMUIEmotionInputManager": [
-              ">= 3.2.0"
+              ">= 4.0.0"
             ],
             "MLSUICore/PublicHeader": [
 
@@ -213,7 +200,7 @@
           "public_header_files": "MLSUICore/Classes/QMUIKit+Categroies/QMUIAlertController+MLSUICore.h",
           "dependencies": {
             "QMUIKit/QMUIComponents/QMUIAlertController": [
-              ">= 3.2.0"
+              ">= 4.0.0"
             ],
             "MLSUICore/PublicHeader": [
 
@@ -226,7 +213,7 @@
           "public_header_files": "MLSUICore/Classes/QMUIKit+Categroies/QMUITextField+MLSUICore.h",
           "dependencies": {
             "QMUIKit/QMUIComponents/QMUITextField": [
-              ">= 3.2.0"
+              ">= 4.0.0"
             ],
             "MLSUICore/PublicHeader": [
 
@@ -239,7 +226,7 @@
           "public_header_files": "MLSUICore/Classes/QMUIKit+Categroies/QMUITextView+MLSUICore.h",
           "dependencies": {
             "QMUIKit/QMUIComponents/QMUITextView": [
-              ">= 3.2.0"
+              ">= 4.0.0"
             ],
             "MLSUICore/PublicHeader": [
 
@@ -282,7 +269,7 @@
 
         ],
         "QMUIKit/QMUIComponents/QMUIImagePickerLibrary": [
-          ">= 3.2.0"
+          ">= 4.0.0"
         ],
         "SDWebImage": [
           ">= 5.0.0"
@@ -310,13 +297,13 @@
 
         ],
         "QMUIKit/QMUIComponents/QMUIImagePreviewView": [
-          ">= 3.2.0"
+          ">= 4.0.0"
         ],
         "QMUIKit/QMUIComponents/QMUILabel": [
-          ">= 3.2.0"
+          ">= 4.0.0"
         ],
         "QMUIKit/QMUIComponents/QMUIZoomImageView": [
-          ">= 3.2.0"
+          ">= 4.0.0"
         ],
         "MLSUICore/MLSUnits": [
 

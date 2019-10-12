@@ -1,63 +1,70 @@
 //
-//  MLSUIHelper.h
+//  QDUIHelper.h
 //  qmuidemo
 //
-//  Created by ZhoonChen on 15/6/2.
-//  Copyright (c) 2015年 MLS Team. All rights reserved.
+//  Created by QMUI Team on 15/6/2.
+//  Copyright (c) 2015年 QMUI Team. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-@class QMUIEmotion;
+#import <Foundation/Foundation.h>
+#import <QMUIKit/QMUIKit.h>
 
-@interface MLSUIHelper : NSObject
+@interface QDUIHelper : NSObject
 
 + (void)forceInterfaceOrientationPortrait;
 
 @end
 
 
-@interface MLSUIHelper (MLSMoreOperationAppearance)
+@interface QDUIHelper (QMUIMoreOperationAppearance)
 
 + (void)customMoreOperationAppearance;
 
 @end
 
 
-@interface MLSUIHelper (MLSAlertControllerAppearance)
+@interface QDUIHelper (QMUIAlertControllerAppearance)
 
 + (void)customAlertControllerAppearance;
 
 @end
 
-@interface MLSUIHelper (MLSDialogViewControllerAppearance)
+@interface QDUIHelper (QMUIDialogViewControllerAppearance)
 
 + (void)customDialogViewControllerAppearance;
 
 @end
 
 
-@interface MLSUIHelper (QMUIEmotionView)
+@interface QDUIHelper (QMUIEmotionView)
 
 + (void)customEmotionViewAppearance;
 @end
 
 
-@interface MLSUIHelper (MLSImagePicker)
+@interface QDUIHelper (QMUIImagePicker)
 
 + (void)customImagePickerAppearance;
 
 @end
 
 
-@interface MLSUIHelper (UITabBarItem)
+@interface QDUIHelper (UITabBarItem)
 
 + (UITabBarItem *)tabBarItemWithTitle:(NSString *)title image:(UIImage *)image selectedImage:(UIImage *)selectedImage tag:(NSInteger)tag;
 
 @end
 
 
+@interface QDUIHelper (Button)
 
-@interface MLSUIHelper (Emotion)
++ (QMUIButton *)generateDarkFilledButton;
++ (QMUIButton *)generateLightBorderedButton;
+
+@end
+
+
+@interface QDUIHelper (Emotion)
 
 + (NSArray<QMUIEmotion *> *)qmuiEmotions;
 
@@ -66,21 +73,21 @@
 @end
 
 
-@interface MLSUIHelper (SavePhoto)
+@interface QDUIHelper (SavePhoto)
 
 + (void)showAlertWhenSavedPhotoFailureByPermissionDenied;
 
 @end
 
 
-@interface MLSUIHelper (Calculate)
+@interface QDUIHelper (Calculate)
 
 + (NSString *)humanReadableFileSize:(long long)size;
     
 @end
 
 
-@interface MLSUIHelper (Theme)
+@interface QDUIHelper (Theme)
 
 + (UIImage *)navigationBarBackgroundImageWithThemeColor:(UIColor *)color;
 @end

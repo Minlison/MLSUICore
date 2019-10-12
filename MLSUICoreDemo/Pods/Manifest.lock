@@ -1,22 +1,83 @@
 PODS:
+  - Masonry (1.1.0)
+  - MLSUICore/Core (1.0.0):
+    - Masonry (>= 1.1.0)
+    - MLSUICore/MLSCategories
+    - MLSUICore/MLSProtocols
+    - MLSUICore/MLSTips
+    - MLSUICore/MLSUnits
+    - MLSUICore/PublicHeader
+    - QMUIKit/QMUIComponents/QMUITableViewCell (>= 4.0.0)
+    - QMUIKit/QMUIMainFrame (>= 4.0.0)
   - MLSUICore/MLSCategories (1.0.0):
     - MLSUICore/PublicHeader
     - QMUIKit/QMUIComponents/QMUIButton
     - QMUIKit/QMUICore
-  - MLSUICore/PublicHeader (1.0.0)
-  - QMUIKit/QMUIComponents/QMUIButton (3.2.1):
+  - MLSUICore/MLSProtocols (1.0.0):
+    - MLSUICore/PublicHeader
+  - MLSUICore/MLSTips (1.0.0):
+    - Masonry (>= 1.1.0)
+    - MLSUICore/MLSUnits
+    - MLSUICore/PublicHeader
+    - QMUIKit/QMUIComponents/QMUITips (>= 4.0.0)
+  - MLSUICore/MLSUnits (1.0.0):
+    - MLSUICore/PublicHeader
     - QMUIKit/QMUICore
-  - QMUIKit/QMUICore (3.2.1):
+  - MLSUICore/PublicHeader (1.0.0)
+  - QMUIKit/QMUIComponents/QMUIButton (4.0.0):
+    - QMUIKit/QMUICore
+  - QMUIKit/QMUIComponents/QMUIEmptyView (4.0.0):
+    - QMUIKit/QMUIComponents/QMUIButton
+    - QMUIKit/QMUICore
+  - QMUIKit/QMUIComponents/QMUIKeyboardManager (4.0.0):
+    - QMUIKit/QMUICore
+  - QMUIKit/QMUIComponents/QMUIMultipleDelegates (4.0.0):
+    - QMUIKit/QMUICore
+  - QMUIKit/QMUIComponents/QMUINavigationTitleView (4.0.0):
+    - QMUIKit/QMUIComponents/QMUIButton
+    - QMUIKit/QMUICore
+  - QMUIKit/QMUIComponents/QMUITableView (4.0.0):
+    - QMUIKit/QMUIComponents/QMUITableViewProtocols
+    - QMUIKit/QMUICore
+  - QMUIKit/QMUIComponents/QMUITableViewCell (4.0.0):
+    - QMUIKit/QMUIComponents/QMUIButton
+    - QMUIKit/QMUICore
+  - QMUIKit/QMUIComponents/QMUITableViewHeaderFooterView (4.0.0):
+    - QMUIKit/QMUICore
+  - QMUIKit/QMUIComponents/QMUITableViewProtocols (4.0.0):
+    - QMUIKit/QMUICore
+  - QMUIKit/QMUIComponents/QMUITips (4.0.0):
+    - QMUIKit/QMUIComponents/QMUIToastView
+    - QMUIKit/QMUICore
+    - QMUIKit/QMUIResources
+  - QMUIKit/QMUIComponents/QMUIToastView (4.0.0):
+    - QMUIKit/QMUIComponents/QMUIKeyboardManager
+    - QMUIKit/QMUIComponents/QMUIVisualEffectView
+    - QMUIKit/QMUICore
+  - QMUIKit/QMUIComponents/QMUIVisualEffectView (4.0.0):
+    - QMUIKit/QMUICore
+  - QMUIKit/QMUICore (4.0.0):
     - QMUIKit/QMUILog
     - QMUIKit/QMUIWeakObjectContainer
-  - QMUIKit/QMUILog (3.2.1)
-  - QMUIKit/QMUIWeakObjectContainer (3.2.1)
+  - QMUIKit/QMUILog (4.0.0)
+  - QMUIKit/QMUIMainFrame (4.0.0):
+    - QMUIKit/QMUIComponents/QMUIEmptyView
+    - QMUIKit/QMUIComponents/QMUIKeyboardManager
+    - QMUIKit/QMUIComponents/QMUIMultipleDelegates
+    - QMUIKit/QMUIComponents/QMUINavigationTitleView
+    - QMUIKit/QMUIComponents/QMUITableView
+    - QMUIKit/QMUIComponents/QMUITableViewHeaderFooterView
+    - QMUIKit/QMUICore
+    - QMUIKit/QMUILog
+  - QMUIKit/QMUIResources (4.0.0)
+  - QMUIKit/QMUIWeakObjectContainer (4.0.0)
 
 DEPENDENCIES:
-  - MLSUICore/MLSCategories (from `../`)
+  - MLSUICore/Core (from `../`)
 
 SPEC REPOS:
   https://cdn.cocoapods.org/:
+    - Masonry
     - QMUIKit
 
 EXTERNAL SOURCES:
@@ -24,9 +85,10 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  MLSUICore: 00172873575cd2eae0c04779eb60a36ed7ac6951
-  QMUIKit: a3af645843b9558eb7aaf407b320eaeb45ab6144
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  MLSUICore: 477b006f4b4c7b9d325d517010c809360f404ea5
+  QMUIKit: b14f5d06b81d01b908e4fa2e6d0177804c6ae0f6
 
-PODFILE CHECKSUM: 6c67f483fb50c3c66c4017f637714b648d0cc2cf
+PODFILE CHECKSUM: 9e7571141bbc7477e251f0251d2af939ee9dcd56
 
 COCOAPODS: 1.7.5
