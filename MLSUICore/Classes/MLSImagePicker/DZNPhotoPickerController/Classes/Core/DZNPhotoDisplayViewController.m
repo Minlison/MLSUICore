@@ -18,11 +18,9 @@
 #import "DZNPhotoMetadata.h"
 #import "DZNPhotoTag.h"
 
-#import "SDWebImageManager.h"
-#import "UIImageView+WebCache.h"
-#import "UIScrollView+EmptyDataSet.h"
-#import "SDImageCache.h"
-#import "SDWebImageDownloader.h"
+#import <SDWebImage/SDWebImage.h>
+#import <DZNEmptyDataSet/UIScrollView+EmptyDataSet.h>
+
 
 
 static NSString *kDZNPhotoCellViewIdentifier = @"com.dzn.photoCellViewIdentifier";

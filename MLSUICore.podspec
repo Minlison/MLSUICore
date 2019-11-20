@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name         = "MLSUICore"
-    s.version      = "1.0.0.beta.1"
+    s.version      = "1.0.0"
     s.summary      = "MLSUICore"
     s.description  = <<-DESC
                         MLSUICore 核心UI组件库
@@ -186,7 +186,7 @@ Pod::Spec.new do |s|
         ss.dependency 'MLSUICore/MLSUnits'
         ss.dependency 'MLSUICore/MLSAlert'
         ss.dependency 'MLSUICore/PublicHeader'
-        ss.dependency 'YYWebImage'
+        ss.dependency 'SDWebImage', sdwebimage_version
     end
     s.subspec 'MLSPageController' do |ss|
         ss.source_files = 'MLSUICore/Classes/MLSPageController/**/*.{h,m}'

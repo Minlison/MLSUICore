@@ -11,7 +11,7 @@
 #import "DZNPhotoSearchResultsController.h"
 #import "DZNPhotoTag.h"
 
-#import "UIScrollView+EmptyDataSet.h"
+#import <DZNEmptyDataSet/UIScrollView+EmptyDataSet.h>
 
 static NSString *kDZNTagCellViewIdentifier = @"com.dzn.tagCellViewIdentifier";
 
