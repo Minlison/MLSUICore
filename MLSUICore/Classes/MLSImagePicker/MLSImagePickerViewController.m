@@ -35,7 +35,7 @@
 #import "MLSSingleImagePickerPreviewViewController.h"
 //#import "MLSUICore.h"
 #import "MLSConfigurationDefine.h"
-#import "QMUIAlertController.h"
+#import <QMUIKit/QMUIKit.h>
 #import "MLSFontUtils.h"
 #if __has_include("UINavigationController+FDFullscreenPopGesture.h")
 #import "UINavigationController+FDFullscreenPopGesture.h"

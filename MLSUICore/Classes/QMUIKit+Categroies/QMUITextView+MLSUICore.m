@@ -7,9 +7,7 @@
 //
 
 #import <objc/runtime.h>
-#import "QMUITextView+MLSUICore.h"
-#import "QMUICore.h"
-#import "QMUILog.h"
+#import <QMUIKit/QMUIKit.h>
 
 @interface QMUITextView (MLSUICore_Private)
 @property(nonatomic, assign, readwrite) BOOL debug;

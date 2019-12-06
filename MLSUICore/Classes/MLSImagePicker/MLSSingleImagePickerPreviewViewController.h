@@ -6,7 +6,7 @@
 //  Copyright (c) 2015年 QMUI Team. All rights reserved.
 //
 
-#import "QMUIKit.h"
+#import <QMUIKit/QMUIKit.h>
 @class MLSSingleImagePickerPreviewViewController;
 
 

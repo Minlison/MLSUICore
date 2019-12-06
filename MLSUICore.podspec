@@ -63,7 +63,7 @@ Pod::Spec.new do |s|
         ss.source_files = 'MLSUICore/Classes/MLSUnits/**/*.{h,m}'
         ss.public_header_files = 'MLSUICore/Classes/Units/**/*.h'
         ss.dependency 'MLSUICore/PublicHeader'
-        ss.dependency 'QMUIKit/QMUICore'
+        ss.dependency 'QMUIKit/QMUICore', qmuikit_version
     end
     
     # tip
@@ -97,8 +97,8 @@ Pod::Spec.new do |s|
         ss.source_files = 'MLSUICore/Classes/MLSCategories/**/*.{h,m}'
         ss.public_header_files = 'MLSUICore/Classes/MLSCategories/**/*.h'
         ss.dependency 'MLSUICore/PublicHeader'
-        ss.dependency 'QMUIKit/QMUICore'
-        ss.dependency 'QMUIKit/QMUIComponents/QMUIButton'
+        ss.dependency 'QMUIKit/QMUICore', qmuikit_version
+        ss.dependency 'QMUIKit/QMUIComponents/QMUIButton' , qmuikit_version
         ss.xcconfig = {
             'OTHER_LDFLAGS' => '$(inherited) -ObjC'
         }
@@ -110,7 +110,7 @@ Pod::Spec.new do |s|
             sss.public_header_files = 'MLSUICore/Classes/MLSCommentToolBar/*.h'
             sss.dependency 'MLSUICore/QMUIKit_MLSCategroies/TextField'
             sss.dependency 'MLSUICore/QMUIKit_MLSCategroies/TextView'
-            sss.dependency 'QMUIKit/QMUIComponents/QMUIButton'
+            sss.dependency 'QMUIKit/QMUIComponents/QMUIButton', qmuikit_version
             sss.dependency 'MLSUICore/MLSProtocols'
             sss.dependency 'MLSUICore/MLSUnits'
             sss.dependency 'MLSUICore/PublicHeader'
@@ -186,7 +186,7 @@ Pod::Spec.new do |s|
         ss.dependency 'MLSUICore/MLSUnits'
         ss.dependency 'MLSUICore/MLSAlert'
         ss.dependency 'MLSUICore/PublicHeader'
-        ss.dependency 'YYWebImage'
+        ss.dependency 'SDWebImage', sdwebimage_version
     end
     s.subspec 'MLSPageController' do |ss|
         ss.source_files = 'MLSUICore/Classes/MLSPageController/**/*.{h,m}'

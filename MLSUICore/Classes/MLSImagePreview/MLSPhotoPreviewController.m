@@ -14,7 +14,7 @@
 #import "MLSConfigurationDefine.h"
 #import "MLSFontUtils.h"
 #import "MLSTipClass.h"
-#import <YYWebImage/YYWebImage.h>
+#import <SDWebImage/SDWebImage.h>
 @implementation MLSPhotoPreviewController (UIAppearance)
 
 + (void)initialize {
@@ -210,11 +210,9 @@ static MLSPhotoPreviewController *imagePreviewViewControllerAppearance;
         NSString *imgStr = img;
         if ([imgStr hasPrefix:@"http"]) {
             [zoomImageView showLoading];
-            [[YYWebImageManager sharedManager] requestImageWithURL:[NSURL URLWithString:imgStr] options:0 progress:^(NSInteger receivedSize, NSInteger expectedSize) {
+            [[SDWebImageManager sharedManager] loadImageWithURL:[NSURL URLWithString:imgStr] options:0 progress:^(NSInteger receivedSize, NSInteger expectedSize, NSURL * _Nullable targetURL) {
                 
-            } transform:^UIImage * _Nullable(UIImage * _Nonnull image, NSURL * _Nonnull url) {
-                return image;
-            } completion:^(UIImage * _Nullable image, NSURL * _Nonnull url, YYWebImageFromType from, YYWebImageStage stage, NSError * _Nullable error) {
+            } completed:^(UIImage * _Nullable image, NSData * _Nullable data, NSError * _Nullable error, SDImageCacheType cacheType, BOOL finished, NSURL * _Nullable imageURL) {
                 if ([zoomImageView.reusedIdentifier isEqual:@(index)]) {
                     [zoomImageView hideEmptyView];
                     if (error) {
@@ -229,11 +227,9 @@ static MLSPhotoPreviewController *imagePreviewViewControllerAppearance;
         }
     } else if ([img isKindOfClass:NSURL.class]) {
         [zoomImageView showLoading];
-        [[YYWebImageManager sharedManager] requestImageWithURL:img options:0 progress:^(NSInteger receivedSize, NSInteger expectedSize) {
+        [SDWebImageManager.sharedManager loadImageWithURL:img options:0 progress:^(NSInteger receivedSize, NSInteger expectedSize, NSURL * _Nullable targetURL) {
             
-        } transform:^UIImage * _Nullable(UIImage * _Nonnull image, NSURL * _Nonnull url) {
-            return image;
-        } completion:^(UIImage * _Nullable image, NSURL * _Nonnull url, YYWebImageFromType from, YYWebImageStage stage, NSError * _Nullable error) {
+        } completed:^(UIImage * _Nullable image, NSData * _Nullable data, NSError * _Nullable error, SDImageCacheType cacheType, BOOL finished, NSURL * _Nullable imageURL) {
             if ([zoomImageView.reusedIdentifier isEqual:@(index)]) {
                 [zoomImageView hideEmptyView];
                 if (error) {

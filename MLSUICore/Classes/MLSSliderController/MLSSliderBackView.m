@@ -7,7 +7,7 @@
 
 #import "MLSSliderBackView.h"
 #import "MLSTipClass.h"
-#import "Masonry.h"
+#import <Masonry/Masonry.h>
 
 @interface MLSSliderBackView ()
 
