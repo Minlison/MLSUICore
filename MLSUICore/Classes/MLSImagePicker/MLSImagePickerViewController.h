@@ -25,6 +25,10 @@ typedef NS_OPTIONS(NSInteger,MLSImagePickerType)
         MLSImagePickerTypeChoseImage = 1 << 1,
         MLSImagePickerTypeSearchImage = 1 << 2,
         MLSImagePickerTypeAll = MLSImagePickerTypeTakePhoto | MLSImagePickerTypeChoseImage | MLSImagePickerTypeSearchImage,
+    
+    MLSImagePickerTypeMaskNormal = 1 << 10, // 默认
+    MLSImagePickerTypeMaskCrop = 1<< 11, // 原型裁剪
+    MLSImagePickerTypeMaskSquare = 1 << 12, // 方形
 };
 
 @interface MLSImagePickerViewController : MLSBaseViewController

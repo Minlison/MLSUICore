@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name         = "MLSUICore"
-    s.version      = "1.0.0.beta.1"
+    s.version      = "1.0.1"
     s.summary      = "MLSUICore"
     s.description  = <<-DESC
                         MLSUICore 核心UI组件库

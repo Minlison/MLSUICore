@@ -290,7 +290,12 @@ EndIgnoreDeprecatedWarning
     picker.sourceType = sourceType;
     picker.allowsEditing = YES;
     picker.delegate = self;
-    picker.cropMode = DZNPhotoEditorViewControllerCropModeCircular;
+    picker.cropMode = DZNPhotoEditorViewControllerCropModeNone;
+    if (self.type & MLSImagePickerTypeMaskCrop) {
+        picker.cropMode = DZNPhotoEditorViewControllerCropModeCircular;
+    } else if (self.type & MLSImagePickerTypeMaskSquare) {
+        picker.cropMode = DZNPhotoEditorViewControllerCropModeSquare;
+    }
     picker.navigationBar.tintColor = UIColorBlack;
     picker.navigationBar.shadowImage = [UIImage qmui_imageWithColor:[UIColor colorWithWhite:0 alpha:0.1]];
     picker.cropSize = CGSizeMake(300, 300);
