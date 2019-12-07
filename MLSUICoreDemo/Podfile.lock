@@ -284,7 +284,7 @@ DEPENDENCIES:
   - MLSUICore (from `../`)
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - AFNetworking
     - DZNEmptyDataSet
     - Masonry
@@ -307,4 +307,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 86f9582851927c39afd6ca0d4205ce0347d31a2e
 
-COCOAPODS: 1.7.3
+COCOAPODS: 1.8.4
