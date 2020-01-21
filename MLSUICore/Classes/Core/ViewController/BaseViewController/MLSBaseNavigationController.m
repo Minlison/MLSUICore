@@ -97,46 +97,46 @@
 }
 
 
--(UIViewController*)popViewControllerAnimated:(BOOL)animated{
-    self.shouldPopItemAfterPopViewController = YES;
-    return [super popViewControllerAnimated:animated];
-}
-
--(NSArray<UIViewController *> *)popToViewController:(UIViewController *)viewController animated:(BOOL)animated{
-    self.shouldPopItemAfterPopViewController = YES;
-    return [super popToViewController:viewController animated:animated];
-}
-
--(NSArray<UIViewController *> *)popToRootViewControllerAnimated:(BOOL)animated{
-    self.shouldPopItemAfterPopViewController = YES;
-    return [super popToRootViewControllerAnimated:animated];
-}
--(BOOL)navigationBar:(UINavigationBar *)navigationBar shouldPopItem:(UINavigationItem *)item{
-    
-    //! 如果应该pop，说明是在 popViewController 之后，应该直接 popItems
-    if (self.shouldPopItemAfterPopViewController) {
-        self.shouldPopItemAfterPopViewController = NO;
-        return YES;
-    }
-    
-    //! 如果不应该 pop，说明是点击了导航栏的返回，这时候则要做出判断区分是不是在 webview 中
-    if ([self.topViewController isKindOfClass:MLSWebViewController.class]) {
-        MLSWebViewController* webVC = (MLSWebViewController*)self.viewControllers.lastObject;
-        if (webVC.webView.canGoBack) {
-            [webVC.webView goBack];
-            
-            //!make sure the back indicator view alpha back to 1
-            self.shouldPopItemAfterPopViewController = NO;
-            [[self.navigationBar subviews] lastObject].alpha = 1;
-            return NO;
-        }else{
-            [self popViewControllerAnimated:YES];
-            return NO;
-        }
-    }else{
-        [self popViewControllerAnimated:YES];
-        return NO;
-    }
-}
+//-(UIViewController*)popViewControllerAnimated:(BOOL)animated{
+//    self.shouldPopItemAfterPopViewController = YES;
+//    return [super popViewControllerAnimated:animated];
+//}
+//
+//-(NSArray<UIViewController *> *)popToViewController:(UIViewController *)viewController animated:(BOOL)animated{
+//    self.shouldPopItemAfterPopViewController = YES;
+//    return [super popToViewController:viewController animated:animated];
+//}
+//
+//-(NSArray<UIViewController *> *)popToRootViewControllerAnimated:(BOOL)animated{
+//    self.shouldPopItemAfterPopViewController = YES;
+//    return [super popToRootViewControllerAnimated:animated];
+//}
+//-(BOOL)navigationBar:(UINavigationBar *)navigationBar shouldPopItem:(UINavigationItem *)item{
+//
+//    //! 如果应该pop，说明是在 popViewController 之后，应该直接 popItems
+//    if (self.shouldPopItemAfterPopViewController) {
+//        self.shouldPopItemAfterPopViewController = NO;
+//        return YES;
+//    }
+//
+//    //! 如果不应该 pop，说明是点击了导航栏的返回，这时候则要做出判断区分是不是在 webview 中
+//    if ([self.topViewController isKindOfClass:MLSWebViewController.class]) {
+//        MLSWebViewController* webVC = (MLSWebViewController*)self.viewControllers.lastObject;
+//        if (webVC.webView.canGoBack) {
+//            [webVC.webView goBack];
+//
+//            //!make sure the back indicator view alpha back to 1
+//            self.shouldPopItemAfterPopViewController = NO;
+//            [[self.navigationBar subviews] lastObject].alpha = 1;
+//            return NO;
+//        }else{
+//            [self popViewControllerAnimated:YES];
+//            return NO;
+//        }
+//    }else{
+//        [self popViewControllerAnimated:YES];
+//        return NO;
+//    }
+//}
 
 @end

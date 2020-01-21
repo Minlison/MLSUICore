@@ -190,8 +190,12 @@
     
 }
 
-- (BOOL)shouldHoldBackButtonEvent {
-    return NO;
+- (BOOL)shouldPopViewControllerByBackButtonOrPopGesture:(BOOL)byPopGesture {
+    return YES;
+}
+
+- (BOOL)forceEnableInteractivePopGestureRecognizer {
+    return YES;
 }
 
 /// MARK: - Empty View

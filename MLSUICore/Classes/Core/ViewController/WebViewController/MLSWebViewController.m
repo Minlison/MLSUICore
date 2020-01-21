@@ -191,4 +191,12 @@
     
 }
 
+- (BOOL)shouldPopViewControllerByBackButtonOrPopGesture:(BOOL)byPopGesture {
+    if (self.webView.canGoBack) {
+        [self.webView goBack];
+        return NO;
+    }
+    return YES;
+}
+
 @end
